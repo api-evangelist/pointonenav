@@ -1,0 +1,38 @@
+# Point One Navigation
+
+> Precision location technology for autonomous systems and vehicles. Point One
+> delivers centimeter-level accuracy through a globally distributed RTK/SSR
+> corrections network (Polaris) and FusionEngine sensor-fusion positioning
+> software, backed by professionally managed infrastructure with 99% uptime.
+
+Authentication across services uses an API key issued from the developer portal
+at https://app.pointonenav.com. The GraphQL API is API-key authenticated; the
+Polaris RTK Network Service requires a Polaris API key.
+
+## APIs
+
+- [Point One GraphQL API](https://docs.pointonenav.com/docs/graphql-api/quickstart): GraphQL interface for workflow and data management (host: api.pointonenav.com).
+- [Polaris RTK Network Service](https://github.com/PointOneNav/polaris): Globally distributed RTK/SSR corrections delivered as RTCM streams (host: polaris.pointonenav.com), consumable via NTRIP.
+- [FusionEngine Client](https://docs.pointonenav.com/docs/fusion-engine-client/): Binary device protocol for real-time positioning output from Atlas and Quectel LG69T hardware.
+
+## SDKs & Tools
+
+- [fusion-engine-client (PyPI)](https://pypi.org/project/fusion-engine-client/): Python + C++ FusionEngine protocol library (MIT).
+- [polaris](https://github.com/PointOneNav/polaris): C / C++ Polaris RTK client libraries (MIT).
+- [p1-host-tools](https://github.com/PointOneNav/p1-host-tools): Python host-side CLI tools for FusionEngine devices (MIT).
+- [ntrip-example](https://github.com/PointOneNav/ntrip-example): Barebones NTRIP client example (C++).
+
+## Documentation
+
+- [Documentation](https://docs.pointonenav.com/)
+- [GraphQL API Quickstart](https://docs.pointonenav.com/docs/graphql-api/quickstart)
+- [FusionEngine Client Docs](https://docs.pointonenav.com/docs/fusion-engine-client/)
+- [Support / Knowledge Base](https://support.pointonenav.com/)
+- [Downloads](https://pointonenav.com/downloads/)
+- [Pricing](https://pointonenav.com/pricing/)
+- [Status](https://status.pointonenav.com/)
+- [GitHub](https://github.com/PointOneNav)
+
+## Standards
+
+- NTRIP transport, RTCM 3.x corrections, NMEA 0183 output, GraphQL API.

@@ -1,8 +1,15 @@
 aid: pointonenav
 name: Pointonenav
-description: Pointonenav is a company surfaced as a portfolio company of khosla-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Point One Navigation provides precision location technology for autonomous
+  systems and vehicles, delivering centimeter-level accuracy even in challenging
+  environments. Its core offerings are the Polaris RTK/SSR corrections network — a
+  globally distributed network of thousands of base stations across the US, UK,
+  EU, Korea, Australia, New Zealand, and Japan with 99% uptime — and the
+  FusionEngine sensor-fusion positioning software for dead reckoning where open-sky
+  GNSS is unavailable. Developers integrate via a GraphQL API for workflow and data
+  management, an NTRIP/RTCM corrections stream, and open-source FusionEngine and
+  Polaris client libraries. Point One is a portfolio company of Khosla Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/pointonenav/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +17,61 @@ x-backed-by:
 - khosla-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://pointonenav.com/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Positioning
+- GNSS
+- RTK
+- Navigation
+- Autonomous Vehicles
+- Robotics
+- Geolocation
+- Sensor Fusion
+apis:
+- name: Point One GraphQL API
+  description: GraphQL interface for Point One workflow and data management,
+    authenticated with an API key issued from app.pointonenav.com.
+  humanURL: https://docs.pointonenav.com/docs/graphql-api/quickstart
+  baseURL: https://api.pointonenav.com/
+  tags:
+  - GraphQL
+  - Positioning
+  properties:
+  - type: Documentation
+    url: https://docs.pointonenav.com/docs/graphql-api/quickstart
+  - type: Authentication
+    url: authentication/pointonenav-authentication.yml
+- name: Polaris RTK Network Service
+  description: Globally distributed RTK/SSR corrections network delivering
+    centimeter-level RTCM corrections, consumable over NTRIP by any compatible GNSS
+    receiver.
+  humanURL: https://github.com/PointOneNav/polaris
+  baseURL: https://polaris.pointonenav.com/
+  tags:
+  - RTK
+  - Corrections
+  - NTRIP
+  properties:
+  - type: Documentation
+    url: https://docs.pointonenav.com/
+  - type: SourceCode
+    url: https://github.com/PointOneNav/polaris
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +80,46 @@ maintainers:
 common:
 - type: Website
   url: https://pointonenav.com/
+- type: Documentation
+  url: https://docs.pointonenav.com/
+- type: APIReference
+  url: https://docs.pointonenav.com/docs/graphql-api/quickstart
+- type: GettingStarted
+  url: https://docs.pointonenav.com/docs/graphql-api/quickstart
+- type: Support
+  url: https://support.pointonenav.com/
+- type: Pricing
+  url: https://pointonenav.com/pricing/
+- type: SignUp
+  url: https://app.pointonenav.com
+- type: GitHubOrganization
+  url: https://github.com/PointOneNav
+- type: StatusPage
+  url: lifecycle/pointonenav-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/pointonenav-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/pointonenav-lifecycle.yml
+- type: SDKs
+  url: packages/pointonenav-packages.yml
+- type: Packages
+  url: packages/pointonenav-packages.yml
+- type: CLI
+  url: cli/pointonenav-cli.yml
+- type: Authentication
+  url: authentication/pointonenav-authentication.yml
+- type: Conventions
+  url: conventions/pointonenav-conventions.yml
+- type: Conformance
+  url: conformance/pointonenav-conformance.yml
+- type: ChangeLog
+  url: changelog/pointonenav-changelog.yml
+- type: DomainSecurity
+  url: security/pointonenav-domain-security.yml
+- type: LLMsTxt
+  url: llms/pointonenav-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1

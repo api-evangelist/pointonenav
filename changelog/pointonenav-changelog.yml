@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/PointOneNav/fusion-engine-client/releases
+scheme: semver
+subject: fusion-engine-client (FusionEngine protocol library)
+current_version: 1.27.0
+entries:
+- version: 1.27.0
+  date: '2024-04-24'
+  breaking: false
+  highlights:
+  - Added support for printing InputDataWrapper message contents.
+  - Improved Python unpacking performance; fixed Python 3.8/3.9 compatibility.
+- version: 1.26.1
+  date: '2024-04-21'
+  breaking: false
+  highlights:
+  - Added Python InputDataType enum for InputDataWrapperMessage.
+  - Print summary table now tracks byte count per message type.
+- version: 1.26.0
+  date: '2024-03-13'
+  breaking: false
+  highlights:
+  - Introduced new ExternalPoseInput message.
+  - Added pose_relay.py device-to-device bootstrapping example.
+  - Fixed incorrect yaw/heading conversion.
+- version: 1.25.1
+  date: '2024-02-20'
+  breaking: false
+  highlights:
+  - Added Linux virtual serial port and Isuzu truck model support.
+  - Added file and stdin/stdout support to p1_filter and p1_capture.
+- version: 1.25.0
+  date: '2024-01-16'
+  breaking: true
+  highlights:
+  - Added GNSSSignalType enum.
+  - Deprecated GNSSSatelliteMessage in favor of GNSSSignalsMessage.

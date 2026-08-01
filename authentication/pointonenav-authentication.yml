@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: docs.pointonenav.com GraphQL API quickstart + github.com/PointOneNav/polaris
+docs: https://docs.pointonenav.com/docs/graphql-api/quickstart
+summary: >-
+  Point One services authenticate with an API key issued from the developer
+  portal at app.pointonenav.com. The same key model applies to the GraphQL API
+  and to the Polaris RTK Network Service.
+schemes:
+- api: Point One GraphQL API
+  type: apiKey
+  in: header
+  key_source: https://app.pointonenav.com
+  docs: https://docs.pointonenav.com/docs/graphql-api/quickstart
+  description: API-key authenticated GraphQL endpoint for workflow and data
+    management.
+- api: Polaris RTK Network Service
+  type: apiKey
+  key_source: https://app.pointonenav.com
+  docs: https://github.com/PointOneNav/polaris
+  description: A valid Polaris API key is required to establish a connection to the
+    RTK corrections stream (polaris.pointonenav.com).

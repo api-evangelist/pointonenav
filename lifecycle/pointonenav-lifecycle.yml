@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: status.pointonenav.com + github.com/PointOneNav/fusion-engine-client releases
+status_page:
+  url: https://status.pointonenav.com/
+  provider: Atlassian Statuspage
+  probed_status: 200
+versioning:
+  scheme: semver
+  evidence: The fusion-engine-client library is versioned with semantic versioning
+    (latest 1.27.0); releases document breaking changes and deprecations.
+deprecation:
+  policy: Deprecations are announced in library release notes with a replacement
+    named before removal.
+  examples:
+  - item: GNSSSatelliteMessage
+    status: deprecated
+    replacement: GNSSSignalsMessage
+    source: fusion-engine-client v1.25.0 release notes
+network_sla:
+  uptime_claim: '99% network uptime'
+  evidence: Point One markets 99% uptime across its globally distributed RTK base
+    station network (US, UK, EU, Korea, Australia, New Zealand, Japan).

@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: github.com/PointOneNav/p1-host-tools
+clis:
+- name: p1-host-tools
+  official: true
+  language: python
+  license: MIT
+  repo: https://github.com/PointOneNav/p1-host-tools
+  install:
+  - method: source
+    command: git clone https://github.com/PointOneNav/p1-host-tools
+  description: Host-side command-line tools for interfacing with Point One
+    FusionEngine devices — configuration, control, and data capture.
+  command_groups:
+  - name: capture
+    purpose: Record FusionEngine message streams to file (p1_capture) from serial
+      or stdin.
+  - name: filter
+    purpose: Filter and re-serialize captured FusionEngine logs (p1_filter).
+  - name: config
+    purpose: Read and apply device configuration to Atlas / LG69T hardware.
+notes: >-
+  fusion-engine-client also ships utility scripts (e.g. pose_relay.py) and a
+  balena-cli-wrapper repo provides device-name support over the Balena CLI.

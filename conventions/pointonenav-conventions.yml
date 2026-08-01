@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: derived
+source: derived from docs.pointonenav.com + PointOneNav GitHub repos (no OpenAPI
+  published; GraphQL + binary/NTRIP surfaces)
+authentication:
+  style: api_key
+  detail: Single API key issued from app.pointonenav.com, used for both the GraphQL
+    API and the Polaris RTK service.
+  ref: authentication/pointonenav-authentication.yml
+api_styles:
+- name: GraphQL API
+  transport: HTTPS POST to a single GraphQL endpoint
+  host: api.pointonenav.com
+  docs: https://docs.pointonenav.com/docs/graphql-api/quickstart
+- name: Polaris RTK corrections
+  transport: TCP/NTRIP correction stream (RTCM)
+  host: polaris.pointonenav.com
+  docs: https://github.com/PointOneNav/polaris
+- name: FusionEngine device protocol
+  transport: Binary, little-endian, CRC-validated, 4-byte aligned messages over
+    serial/TCP
+  docs: https://docs.pointonenav.com/docs/fusion-engine-client/
+coordinate_frame:
+  body: '+x forward, +y left, +z up; yaw counter-clockwise from east'
+  source: fusion-engine-client protocol documentation
+error_handling:
+  detail: FusionEngine messages carry a CRC for integrity validation; GraphQL
+    responses follow the standard GraphQL errors[] envelope.
+cross_links:
+  authentication: authentication/pointonenav-authentication.yml
+  lifecycle: lifecycle/pointonenav-lifecycle.yml
+  conformance: conformance/pointonenav-conformance.yml

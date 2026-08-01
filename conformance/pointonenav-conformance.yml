@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: derived
+source: derived from Point One product docs + GitHub repos (polaris, ntrip-example,
+  fusion-engine-client) and public product descriptions
+standards:
+- id: ntrip
+  name: NTRIP (Networked Transport of RTCM via Internet Protocol)
+  conforms: true
+  evidence: Point One publishes an NTRIP client example (github.com/PointOneNav/ntrip-example)
+    and the Polaris RTK Network Service is consumable by any NTRIP-compatible GNSS
+    receiver.
+- id: rtcm
+  name: RTCM 3.x differential correction messages
+  conforms: true
+  evidence: The Polaris network delivers RTK and SSR corrections as RTCM-format
+    streams to rovers.
+- id: nmea-0183
+  name: NMEA 0183 GNSS sentences
+  conforms: true
+  evidence: Point One maintains a pynmea2 fork and FusionEngine tooling parses/emits
+    NMEA-0183 position output.
+- id: graphql
+  name: GraphQL specification
+  conforms: true
+  evidence: The Point One API is a GraphQL interface (docs.pointonenav.com/docs/graphql-api).
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: Authentication is API-key based (issued via app.pointonenav.com); no
+    OAuth 2.0 flow is documented.

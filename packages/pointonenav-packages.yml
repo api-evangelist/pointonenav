@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: searched
+source: PyPI + github.com/PointOneNav org repositories
+packages:
+- name: fusion-engine-client
+  registry: pypi
+  official: true
+  language: python
+  version: 1.27.0
+  license: MIT
+  install: pip install fusion-engine-client[all]
+  url: https://pypi.org/project/fusion-engine-client/
+  source: https://github.com/PointOneNav/fusion-engine-client
+  description: Point One FusionEngine protocol library for real-time interaction and
+    post-processing analysis with Atlas / Quectel LG69T positioning devices. Ships
+    Python (3.8+) and a header-based C++ (C++11–C++23) implementation.
+- name: fusion-engine-client (C++)
+  registry: github
+  official: true
+  language: c++
+  license: MIT
+  install: CMake FetchContent / Bazel
+  url: https://github.com/PointOneNav/fusion-engine-client
+  source: https://github.com/PointOneNav/fusion-engine-client
+  description: C++11–C++23 message definitions and CRC-validated binary parser for
+    the FusionEngine protocol.
+- name: polaris
+  registry: github
+  official: true
+  language: c/c++
+  license: MIT
+  install: CMake / Bazel / GNU Make
+  url: https://github.com/PointOneNav/polaris
+  source: https://github.com/PointOneNav/polaris
+  description: Native C (libpolaris_client) and C++ (libpolaris_cpp_client) client
+    libraries for Point One's Polaris RTK Network Service. Requires a Polaris API
+    key from app.pointonenav.com.
+- name: p1-host-tools
+  registry: github
+  official: true
+  language: python
+  license: MIT
+  url: https://github.com/PointOneNav/p1-host-tools
+  source: https://github.com/PointOneNav/p1-host-tools
+  description: Host-side command-line tools for interfacing with, configuring, and
+    capturing data from Point One FusionEngine devices.
+- name: ntrip-example
+  registry: github
+  official: true
+  language: c++
+  url: https://github.com/PointOneNav/ntrip-example
+  source: https://github.com/PointOneNav/ntrip-example
+  description: Barebones NTRIP client example for working with any compatible GNSS
+    receiver against the Polaris corrections stream.
